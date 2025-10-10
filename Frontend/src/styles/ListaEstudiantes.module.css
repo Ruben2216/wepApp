@@ -1,0 +1,138 @@
+.lista-estudiantes {
+  display: flex;
+  padding: 20px;
+  gap: 30px;
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  min-height: 100vh;
+}
+
+.lista-estudiantes__form {
+  flex: 0 0 400px;
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  height: fit-content;
+}
+
+.lista-estudiantes__list {
+  flex: 1;
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.lista-estudiantes__title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #333;
+  text-align: center;
+}
+
+.lista-estudiantes__field {
+  margin-bottom: 15px;
+}
+
+.lista-estudiantes__label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #555;
+}
+
+.lista-estudiantes__input {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+.lista-estudiantes__buttons {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.lista-estudiantes__button {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.lista-estudiantes__button--register {
+  background-color: #2e7d32;
+  color: white;
+}
+
+.lista-estudiantes__button--cancel {
+  background-color: #00acc1;
+  color: white;
+}
+
+.lista-estudiantes__table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.lista-estudiantes__header-row {
+  background-color: #f0f0f0;
+}
+
+.lista-estudiantes__header-cell {
+  padding: 12px;
+  text-align: left;
+  font-weight: bold;
+  border: 1px solid #ddd;
+  background-color: #f8f8f8;
+  color: black;
+}
+
+.lista-estudiantes__row {
+  border-bottom: 1px solid #ddd;
+}
+
+.lista-estudiantes__cell {
+  padding: 10px 12px;
+  border: 1px solid #ddd;
+  text-align: left;
+  color: black;
+}
+
+.lista-estudiantes__action {
+  padding: 5px 10px;
+  margin: 2px;
+  border: none;
+  border-radius: 3px;
+  font-size: 12px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.lista-estudiantes__action--edit {
+  background-color: #2196f3;
+  color: white;
+}
+
+.lista-estudiantes__action--delete {
+  background-color: #f44336;
+  color: white;
+}
+
+.lista-estudiantes__count {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 15px;
+  text-align: center;
+  font-weight: bold;
+}
