@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { saveEstudiante } from "../services/api";
 import styles from "../styles/ListaEstudiantes.module.css";
 import EstudianteForm from "./EstudianteForm";
 import EstudianteTable from "./EstudianteTable";
@@ -118,18 +119,9 @@ const ListaEstudiantes = () => {
         console.log("Datos a enviar:", formData);
 
         try {
-            const response = await fetch("http://localhost:4000/api/save", {
-                method: "POST",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify(formData),
-            });
-            const result = await response.json();
-            if (response.ok) {
-                console.log("Datos enviados exitosamente:", result);
-                handleRegistrar();
-            } else {
-                console.error("Error al enviar datos:", result);
-            }
+            const data = await saveEstudiante(formData);
+            console.log("Datos enviados exitosamente:", data);
+            handleRegistrar();
         } catch (error) {
             console.error("Error al enviar el formulario:", error);
         }
@@ -138,7 +130,7 @@ const ListaEstudiantes = () => {
     return (
         <form onSubmit={handleSubmit}>
             <div className={styles["lista-estudiantes"]}>
-                {/* Formulario */}
+                {/* Formulario */} 
                 <EstudianteForm
                     formData={formData}
                     editando={editando}
