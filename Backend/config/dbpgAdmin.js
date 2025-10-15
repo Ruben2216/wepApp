@@ -39,10 +39,10 @@ async function insertarEstudiantes(
 async function obtenerEstudiantes() {
     try {
         const estudiantes = await dbConnection.any("SELECT * FROM estudiantes");
-
-        console.log(estudiantes);
+        return estudiantes;
     } catch (error) {
         console.error("Error al obtener estudiantes:", error);
+        throw error;
     }
 }
 
